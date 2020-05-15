@@ -1,0 +1,79 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>Your Games</h1>
+            <span (click)="open(newgame)" class="btn btn-primary" style="cursor: pointer;">
+                New Game
+            </span>
+        </div>
+
+        <div class="card-body">
+            <p *ngIf="games.length == 0">You have no games!</p>
+            <table class="table" *ngIf="games.length > 0">
+                <thead>
+                    <tr class="th">
+                        <th scope="col">Level</th>
+                        <th scope="col">Phrase</th>
+                        <th scope="col">Remaining</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let game of games" [routerLink]="['/game', game._id]" style="cursor: pointer;">
+                        <td scope="col">{{game.level.name}}</td>
+                        <td scope="col" class="view">
+                            <div *ngFor="let char of game.view.split('')"
+                                [ngStyle]="{'background-color': game.colors.wordBackground, 'color': game.colors.textBackground, 'font-family': game.font.rule}">
+                                {{char}}</div>
+                        </td>
+                        <td scope="col">{{game.remaining}}</td>
+                        <td scope="col">{{game.target}}</td>
+                        <td scope="col">{{game.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<ng-template #newgame let-modal>
+    <div class="modal-header">
+        <h1 class="modal-title" id="modal-basic-title">Create Game</h1>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form method="POST" [formGroup]="newGameForm">
+            <div class="form-group">
+                <label for="wordBackground">Word</label>
+                <input type="color" name="wordBackground" formControlName="wordBackground" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="textBackground">Fore</label>
+                <input type="color" name="textBackground" formControlName="textBackground" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="guessBackground">Guess</label>
+                <input type="color" name="guessBackground" formControlName="guessBackground" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="font">Font</label>
+                <select formControlName="font" class="form-control" name="font">
+                    <option *ngFor="let font of meta.fonts" [ngValue]="font.rule">{{font.rule}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="level">Level</label>
+                <select formControlName="level" class="form-control" name="level">
+                    <option *ngFor="let level of meta.levels" [ngValue]="level.name">{{level.name}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="modal.close('Saved')">Submit</button>
+    </div>
+</ng-template>

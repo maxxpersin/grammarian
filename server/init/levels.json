@@ -1,0 +1,20 @@
+[
+    {
+        "name": "easy",
+        "minLength": 4,
+        "maxLength": 5,
+        "rounds": 8
+    },
+    {
+        "name": "medium",
+        "minLength": 4,
+        "maxLength": 10,
+        "rounds": 7
+    },
+    {
+        "name": "hard",
+        "minLength": 9,
+        "maxLength": 300,
+        "rounds": 6
+    }
+]

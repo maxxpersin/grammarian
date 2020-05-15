@@ -1,0 +1,51 @@
+[
+    {
+        "category": "monospace",
+        "family": "",
+        "rule": "VT323",
+        "url": "https://fonts.googleapis.com/css?family=VT323&display=swap"
+        
+    },
+    {
+        "category": "serif",
+        "family": "",
+        "rule": "Lacquer",
+        "url": "https://fonts.googleapis.com/css?family=Lacquer&display=swap"
+    },
+    {
+        "category": "sans-serif",
+        "family": "",
+        "rule": "Anton",
+        "url": "https://fonts.googleapis.com/css?family=Anton&display=swap"
+    },
+    {
+        "category": "cursive",
+        "family": "",
+        "rule": "Pacifico",
+        "url": "https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+    },
+    {
+        "category": "cursive",
+        "family": "",
+        "rule": "Pangolin",
+        "url": "https://fonts.googleapis.com/css?family=Pangolin&display=swap"
+    },
+    {
+        "category": "cursive",
+        "family": "",
+        "rule": "Lobster",
+        "url": "https://fonts.googleapis.com/css?family=Lobster&display=swap"
+    },
+    {
+        "category": "sans-serif",
+        "family": "",
+        "rule": "Federant",
+        "url": "https://fonts.googleapis.com/css?family=Federant&display=swap"
+    },
+    {
+        "category": "cursive",
+        "family": "",
+        "rule": "Satisfy",
+        "url": "https://fonts.googleapis.com/css?family=Satisfy&display=swap"
+    }
+]

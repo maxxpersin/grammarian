@@ -1,0 +1,93 @@
+[
+    {
+        "defaults": {
+            "font": {
+                "category": "monospace",
+                "family": "",
+                "rule": "VT323",
+                "url": "https://fonts.googleapis.com/css?family=VT323&display=swap"
+            },
+            "level": {
+                "name": "medium",
+                "minLength": 4,
+                "maxLength": 10,
+                "rounds": 7
+            },
+            "colors": {
+                "guessBackground": "#381639",
+                "textBackground": "#ff3e3e",
+                "wordBackground": "#0388fc"
+            }
+        },
+        "fonts": [
+            {
+                "category": "monospace",
+                "family": "",
+                "rule": "VT323",
+                "url": "https://fonts.googleapis.com/css?family=VT323&display=swap"
+            },
+            {
+                "category": "serif",
+                "family": "",
+                "rule": "Lacquer",
+                "url": "https://fonts.googleapis.com/css?family=Lacquer&display=swap"
+            },
+            {
+                "category": "sans-serif",
+                "family": "",
+                "rule": "Anton",
+                "url": "https://fonts.googleapis.com/css?family=Anton&display=swap"
+            },
+            {
+                "category": "cursive",
+                "family": "",
+                "rule": "Pacifico",
+                "url": "https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+            },
+            {
+                "category": "cursive",
+                "family": "",
+                "rule": "Pangolin",
+                "url": "https://fonts.googleapis.com/css?family=Pangolin&display=swap"
+            },
+            {
+                "category": "cursive",
+                "family": "",
+                "rule": "Lobster",
+                "url": "https://fonts.googleapis.com/css?family=Lobster&display=swap"
+            },
+            {
+                "category": "sans-serif",
+                "family": "",
+                "rule": "Federant",
+                "url": "https://fonts.googleapis.com/css?family=Federant&display=swap"
+            },
+            {
+                "category": "cursive",
+                "family": "",
+                "rule": "Satisfy",
+                "url": "https://fonts.googleapis.com/css?family=Satisfy&display=swap"
+            }
+        ],
+        "levels": [
+            {
+                "name": "easy",
+                "minLength": 4,
+                "maxLength": 5,
+                "rounds": 8
+            },
+            {
+                "name": "medium",
+                "minLength": 4,
+                "maxLength": 10,
+                "rounds": 7
+            },
+            {
+                "name": "hard",
+                "minLength": 9,
+                "maxLength": 300,
+                "rounds": 6
+            }
+        ]
+    }
+]

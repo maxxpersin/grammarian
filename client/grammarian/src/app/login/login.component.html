@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+   <div class="card w-50 mx-auto" style="width: 40em; margin-top: 2em; margin-bottom: 2em;">
+      <div class="card-header">
+         <h1>
+            Login to Grammarian
+         </h1>
+      </div>
+      <div class="card-body">
+         <form [formGroup]="loginForm" method="POST" (ngSubmit)="onSubmit()" class="container-fluid">
+            <div class="form-group">
+               <label for="email">Email</label>
+               <input name="email" formControlName="email" type="email" class="form-control">
+            </div>
+            <div class="form-group">
+               <label for="password">Password</label>
+               <input name="password" formControlName="password" class="form-control" type="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+   </div>
+   <div class="alert alert-danger w-50 mx-auto" *ngIf="showAlert">Invalid email or password</div>
+</div>

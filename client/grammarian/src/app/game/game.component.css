@@ -1,0 +1,66 @@
+.card {
+    margin-top: 2em;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    place-content: end space-between;
+}
+
+input[type="text"] {
+    width: 2.5em;
+}
+
+input[type="submit"] {
+    margin-left: 1em;
+}
+
+form {
+    float: right;
+    display: flex;
+}
+
+h1 {
+    font-size: 1.5em;
+    position: relative;
+    top: 3px;
+}
+
+.view {
+    display: flex;
+}
+
+.view>* {
+    font-size: 3.5em;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    margin-right: 0.25em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+.past-guesses {
+    margin-top: 1.5em;
+}
+
+.past-guesses>h2 {
+    padding-bottom: 0.5em;
+}
+
+.guess-view-container {
+    display: flex;
+}
+
+.guess-view-container>* {
+    font-size: 2em;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    margin-right: 0.25em;
+}
+
+.alert {
+    margin-top: 2em;
+}

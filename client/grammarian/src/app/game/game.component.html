@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1 *ngIf="!gameOver.value">Remaining: {{ game.remaining }}</h1>
+            <h1 *ngIf="gameOver.value">{{ game.status.charAt(0).toUpperCase() + game.status.slice(1) }}</h1>
+            <form *ngIf="!gameOver.value" method="POST" [formGroup]="guessForm" (ngSubmit)="onSubmit()">
+                <input type="text" class="form-control" formControlName="guess" maxLength="1" required>
+                <input type="submit" class="btn btn-primary" value="Guess">
+            </form>
+        </div>
+        <div class="card-body">
+            <div class="view">
+                <div *ngFor="let char of game.view.split('')"
+                    [ngStyle]="{'background-color': game.colors.wordBackground, 'color': game.colors.textBackground, 'font-family': game.font.rule}">
+                    {{ char }}</div>
+            </div>
+            <div class="past-guesses">
+                <h2>Past guesses</h2>
+                <div class="guess-view-container">
+                    <div *ngFor="let char of game.guesses.split('')"
+                        [ngStyle]="{'background-color': game.colors.guessBackground, 'color': game.colors.textBackground, 'font-family': game.font.rule}">
+                        {{ char }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="showAlert">That letter has already been guessed</div>
+</div>

@@ -1,0 +1,6 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a [routerLink]="['/']" class="navbar-brand">Grammarian</a>
+        <button *ngIf="showLogout" class="nav-bar-item btn btn-secondary" (click)="logout()">Logout</button>
+    </div>
+</nav>
